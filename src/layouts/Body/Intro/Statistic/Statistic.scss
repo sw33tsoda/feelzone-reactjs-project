@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@600&display=swap');
+
+$font-roboto : 'Roboto Condensed', sans-serif;
+$font-openSans : 'Open Sans', sans-serif;
+$font-varta : 'Varta', sans-serif;
+$font-pacifico: 'Pacifico',cursive;
+$pink : #E91E63;
+
+
+.intro {
+    &__stats {
+        &__box {
+            height: 150px;
+            width: 150px;
+            border-radius: 150px;
+            background:white;
+            color:#dd5e89;
+            // box-shadow: 0px 0px 5px 2px $pink;
+            margin-bottom: 2em;
+            margin-top: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: 0.5s;
+            border:2.5px solid $pink;
+
+            &:hover {
+                border:5px dashed $pink;
+                box-shadow: none;
+                cursor: pointer;
+            }
+
+            &__figure {
+                font-family: $font-roboto;
+                color:$pink;
+                font-weight: bold;
+                font-size:2em;
+            }
+        }
+
+        &__chart {
+            margin-top: 3em;
+        }
+
+        &__box-description {
+            font-family: $font-varta;
+        }
+    }
+}

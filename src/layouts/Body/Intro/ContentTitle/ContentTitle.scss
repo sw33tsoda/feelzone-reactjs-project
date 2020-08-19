@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@600&display=swap');
+
+$font-roboto : 'Roboto Condensed', sans-serif;
+$font-openSans : 'Open Sans', sans-serif;
+$font-varta : 'Varta', sans-serif;
+$font-pacifico: 'Pacifico',cursive;
+$pink : #E91E63;
+
+.intro {
+    &__content-title {
+        margin-top: 5em;
+        text-align: center;
+        padding:1em 0em 1em 0em;
+        h1 {
+            font-family: $font-roboto;
+            font-weight: bold;
+            color: $pink;
+        }
+
+        p {
+            font-family: $font-varta;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro {
+        &__content-title {
+            h1,legend {
+                text-align: center !important;
+            }
+        }
+    }
+}

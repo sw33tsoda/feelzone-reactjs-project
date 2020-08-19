@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@600&display=swap');
+
+$font-roboto : 'Roboto Condensed', sans-serif;
+$font-openSans : 'Open Sans', sans-serif;
+$font-varta : 'Varta', sans-serif;
+$font-pacifico: 'Pacifico',cursive;
+$pink : #E91E63;
+
+
+.intro {
+    &__sign-up {
+        &__headline-form {
+            margin-bottom: 2em;
+            padding:0 1em 0 1em;
+            label {
+                font-weight: bold;
+                font-family: $font-roboto;
+            }
+            &__tnc {
+                &__checkbox {
+                    margin-top: 1em ;
+                    &__thebox {
+                        width:20px;
+                        height:20px;
+                        box-shadow: 0px 0px 0px 2px $pink !important;
+                        border-radius: 0.25em;
+                        margin-right: 0.5em;
+                        float:left;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &__dot {
+                            background:$pink;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 0.25em;
+                        }
+                    }
+                }
+                &__content {
+                    border:0;
+                    box-shadow: 0px 0px 0px 2px $pink !important;
+                    border-radius: 0.25em;
+                    height: 340px;
+                    overflow-y: scroll;
+                    padding:0.5em 0.75em 0.5em 0.75em;
+                    font-family: $font-varta;
+                    &::-webkit-scrollbar {
+                        width: 0.5em;
+                    }
+                      
+                      /* Track */
+                    &::-webkit-scrollbar-track {
+                        border-radius: 10px;
+                    }
+                       
+                      /* Handle */
+                    &::-webkit-scrollbar-thumb {
+                        background:$pink; 
+                        border-radius: 10px;
+                    }
+                      
+                      /* Handle on hover */
+                    &::-webkit-scrollbar-thumb:hover {
+                        background: #b30000; 
+                    }
+                }
+            }
+
+            button {
+                margin-top: 1em;
+                border-radius: 0.25em;
+                border:0;
+                padding: 1em;
+                font-family: $font-roboto;
+                font-weight: normal;
+                color:white;
+                box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+                background: $pink;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .intro {
+        &__sign-up {
+            &__headline-form {
+                padding:0;
+                &__tnc {
+                    &__content {
+                        height: 450px;
+                    }
+                }
+                button {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
