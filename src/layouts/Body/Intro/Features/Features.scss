@@ -15,7 +15,7 @@ $pink : #E91E63;
             margin-top:1em;
             margin-bottom: 1em;
             &__title {
-                background:linear-gradient(to right, #E91E63, white);
+                background:$pink;
                 color:white;
                 padding:0 0.5em 0 0.5em;
                 font-family: $font-roboto;
