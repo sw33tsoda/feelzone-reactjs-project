@@ -21,7 +21,8 @@ $pink : #E91E63;
         align-items:flex-end;
         justify-content: center;
         transition: 0.25s;
-
+        border-radius: 0.25em;
+        box-shadow: 3px 3px 1px $pink;
         &__alt {
             position: absolute;
             left: 1em;
@@ -29,6 +30,11 @@ $pink : #E91E63;
             color:white;
             h2 {
                 text-shadow: 0.05em 0.05em $pink;
+                font-family: $font-pacifico;
+            }
+
+            p {
+                font-family: $font-roboto;
             }
         }
 

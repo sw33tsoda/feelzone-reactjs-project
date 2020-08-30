@@ -1,8 +1,39 @@
 import React from 'react'; 
+import { Row, Col, Container } from 'reactstrap';
+import './ListAlbum.scss'
+import ContentTitle from '../ContentTitle';
+import PropTypes from 'prop-types';
+
+ListAlbum.propTypes = {
+    data : PropTypes.array,
+    title : PropTypes.string,
+}
+
+ListAlbum.defaultProps = {
+    data : [],
+    title : 'untitled',
+}
+
 
 function ListAlbum(props) {
+    const {data:items,title} = props;
+
     return (
-        <h1>Album</h1>
+        <div className="zone__list-album">
+            <ContentTitle title={title}></ContentTitle>
+            <Container>
+                <Row>
+                    {items && items.map((item,index) => <Col key={index}>
+                        <div className="zone__list-album__album">
+                            <img className="zone__list-album__album__picture" src={item.src} width="100%" height="100%"/>
+                            <div className="zone__list-album__album__overlay">
+                                <p>{item.title}</p>
+                            </div>
+                        </div>
+                    </Col>)}
+                </Row>
+            </Container>
+        </div>
     )
 }
 

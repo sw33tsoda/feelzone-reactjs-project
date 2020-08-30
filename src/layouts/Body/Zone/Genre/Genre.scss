@@ -8,11 +8,17 @@ $font-varta : 'Varta', sans-serif;
 $font-pacifico: 'Pacifico',cursive;
 $pink : #E91E63;
 
+
 .zone {
-    &__list-album {
-        // background: $pink; 
+    &__genres {
         padding:1em 0 1em 0;
-        &__album {
+
+        .genre-item {
+            height: 100px;
+            margin-bottom: 1.5em;
+        }
+
+        &__genre {
             cursor: pointer;
             width: 100%;
             height: 100%;
@@ -20,31 +26,39 @@ $pink : #E91E63;
             overflow: hidden; 
             border-radius: 0.25em;
             &__picture {
+                object-fit: cover;
                 transition: 0.5s;
             }
-    
+
             &__overlay {
+                width: 100%;
                 color: white;
                 text-shadow: 0.05em 0.05em $pink;
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, -30%);
                 text-align: center;
-                opacity: 0;
+                opacity: 1;
                 transition: 0.5s;
                 font-family: $font-pacifico;
                 font-size: 1.5em;
             }
         }
 
-        &__album:hover &__album__overlay {
+        &__genre:hover &__genre__overlay {
             opacity: 1;
+            p {
+                transition: 0.5s;
+                font-size: 1.25em;
+                transform:rotate(-10deg);
+                text-decoration:underline;
+            }
         }
 
-        &__album:hover &__album__picture {
+        &__genre:hover &__genre__picture {
             filter:saturate(0);
-            transform: scale(1.3);
+            transform: scale(1.3);   
         }
     }
 }

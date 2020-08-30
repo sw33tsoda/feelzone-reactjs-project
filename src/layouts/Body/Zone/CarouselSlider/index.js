@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './CarouselSlider.scss';
 import classnames from 'classnames';
+import { Container } from 'reactstrap';
 
 const items = [
     {
@@ -49,25 +50,27 @@ function CarouselSlider(props) {
     },[currentIndex]);
 
     return (
-        <div className="zone__carousel-slider"
-            style={{
-                background:`url(${items[currentIndex].src})`,
-            }}
-        >
-            {items && <div className="zone__carousel-slider__alt">
-                <h2>{items[currentIndex].imageAlt.title}</h2>
-                <p>{items[currentIndex].imageAlt.sub_title}</p>         
-            </div>}
-            {items && <center className="zone__carousel-slider__buttons-group">
-                {items.map((item,index) => 
-                    <button 
-                        className={classnames('zone__carousel-slider__buttons-group__buttons',{'carousel-active-button':index === currentIndex})} 
-                        key={index}
-                        onClick={() => handleChangeSlide(index)}
-                    />
-                )}
-            </center>}
-        </div>
+        <Container>
+            <div className="zone__carousel-slider"
+                style={{
+                    background:`url(${items[currentIndex].src})`,
+                }}
+            >
+                {items && <div className="zone__carousel-slider__alt">
+                    <h2>{items[currentIndex].imageAlt.title}</h2>
+                    <p>{items[currentIndex].imageAlt.sub_title}</p>         
+                </div>}
+                {items && <center className="zone__carousel-slider__buttons-group">
+                    {items.map((item,index) => 
+                        <button 
+                            className={classnames('zone__carousel-slider__buttons-group__buttons',{'carousel-active-button':index === currentIndex})} 
+                            key={index}
+                            onClick={() => handleChangeSlide(index)}
+                        />
+                    )}
+                </center>}
+            </div>
+        </Container>
     );
 }
 

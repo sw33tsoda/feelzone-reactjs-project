@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@600&display=swap');
+
+$font-roboto : 'Roboto Condensed', sans-serif;
+$font-openSans : 'Open Sans', sans-serif;
+$font-varta : 'Varta', sans-serif;
+$font-pacifico: 'Pacifico',cursive;
+$pink : #E91E63;
+
+
+.zone {
+    div.trending {
+        margin-top: 1em;
+        width: 100%;
+
+        div.pagination {
+            display: flex;
+            justify-content: space-evenly;
+            a.page {
+                font-weight: bold;
+                text-shadow: 0.1em 0.1em $pink;
+                color:white;
+                width: 50px;
+                border-radius: 0.25em;
+                text-align: center;
+                font-family: $font-roboto;
+                font-size: 1.5em;
+                text-decoration:none;
+                cursor: pointer;
+            }
+
+            a.current-page {
+                color:$pink !important;
+                text-shadow: none;
+            }
+        }
+
+        div.trending-item {
+            padding:0.25em;
+            display: flex;
+            margin-bottom: 0.5em;
+            cursor: pointer;
+            div.picture {
+
+                img {
+                    width: 50px;
+                    border-radius: 0.25em;
+                }
+
+                svg.fa-play {
+                    position: absolute;
+                    left: 2.35em;
+                    top: 1.30em;
+                    opacity: 0;
+                }
+            }
+
+            &:hover svg.fa-play {
+                opacity: 1!important;
+                animation-name: spin;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            div.info {
+                margin-left: 0.5em;
+                border-radius: 0.25em;
+                width: 100%;
+                margin-left:0.5em;
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                white-space:nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                p {
+                    margin:0;
+                }
+
+                p.title {
+                    font-family: $font-roboto;
+                    font-size: 0.9em;
+                    color:$pink;
+                    font-weight: bold;
+                }
+
+                p.singer {
+                    font-family: $font-varta;
+                    font-size:0.75em;
+                }
+            }
+        }
+
+        div.top {
+
+            div.top-item {
+                margin-bottom: 1em;
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+                div.left {
+                    display: flex;
+
+                    img.picture {
+                        border-radius: 0.25em;
+                    }
+
+                    h2.position {
+                        position: absolute;
+                        left: 1.25em;
+                        color:white;
+                        text-shadow: 0.05em 0.05em $pink;
+                    }
+
+                    svg.fa-play {
+                        position: relative;
+                        left: -3.25em;
+                        top: 2.50em;
+                        opacity: 0;
+                    }
+    
+                    div.info {
+                        margin-left: 0em;
+                        display: flex;
+                        flex-direction: column;
+                        align-self: center;
+                        h3,p {
+                            margin:0;
+                        }
+    
+                        h3.title {
+                            color:$pink;
+                            font-family: $font-roboto;
+                            font-weight: bold;
+                            font-size: 1.25em;
+                        }
+    
+                        p.singer {
+                            font-family: $font-varta;
+                        }
+                    }
+
+                    &:hover svg.fa-play {
+                        opacity: 1;
+                        animation-name: spin;
+                        animation-duration: 2s;
+                        animation-iteration-count: infinite;
+                    }
+
+                    &:hover img.picture {
+                        filter: saturate(0);
+                    }
+                }
+
+                div.views {
+                    flex-direction: column;
+                    align-self: center;
+                    p {
+                        font-family: $font-varta;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes spin {
+    0% {transform:scale(1);}
+    50% {transform:scale(2);}
+    100% {transform:scale(1);}
+}
