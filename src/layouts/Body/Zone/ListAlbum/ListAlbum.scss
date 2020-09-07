@@ -11,7 +11,7 @@ $pink : #E91E63;
 .zone {
     &__list-album {
         // background: $pink; 
-        padding:1em 0 1em 0;
+        padding:1em 0 0.25em 0;
         &__album {
             cursor: pointer;
             width: 100%;
@@ -35,6 +35,11 @@ $pink : #E91E63;
                 transition: 0.5s;
                 font-family: $font-pacifico;
                 font-size: 1.5em;
+            }
+
+            .latest_albums {
+                font-size: 1em !important;
+                transform: translate(-50%, -40%);
             }
         }
 

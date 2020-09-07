@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeadphones,faPlay } from '@fortawesome/free-solid-svg-icons';
 
 function Top(props) {
-    const {item,index} = props;
+    const {item,index,setCurrentPlaying} = props;
     return (
-        <div className="top-item">
+        <div className="top-item" onClick={() => setCurrentPlaying(item)}>
             <div className="left">
                 <img className="picture" src={item.thumbnail}></img>
                 <FontAwesomeIcon icon={faPlay} color="white"/>

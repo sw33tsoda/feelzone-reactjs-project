@@ -14,7 +14,7 @@ $pink : #E91E63;
         color:$pink;
         font-size: 18pt;
         font-weight: bold;
-        text-shadow: 0.1em 0.1em $pink;
-        color:white;
+        // text-shadow: 0.1em 0.1em $pink;
+        color:$pink;
     }
 }

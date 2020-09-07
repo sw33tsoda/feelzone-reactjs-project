@@ -41,7 +41,19 @@ export const latestAlbums = [
     {
         src: 'https://vignette.wikia.nocookie.net/vocaloid/images/3/35/Magical_Mirai_2017_album.jpg/revision/latest?cb=20170804203817',
         title: 'Project Diva',
-    }
+    },
+    {
+        src: 'https://cdn.shopify.com/s/files/1/0004/4099/1797/products/1582126937Nausicaa-ImageCover_1024x1024.jpg?v=1582128466',
+        title: 'Sayonara no Natsu'
+    },
+    {
+        src: 'https://factmag-images.s3.amazonaws.com/wp-content/uploads/2013/07/howls-7.22.2013-500x500.jpg',
+        title: 'Journey to the West'
+    },
+    {
+        src: 'https://i.scdn.co/image/86ab94f2d2d48628fa8be47d8a06c80699316954',
+        title: 'So close    '
+    },
 ]
 
 export const genre = [
@@ -70,6 +82,10 @@ export const genre = [
         genre: 'Dinner',
     }
 ];
+
+export const hotTags = [
+    '#lofi','#kpop','#son_tung','#bigcityboi','#binz','#touliver','#sadboi','#instrumental','#phuong_ly','#ghibli','#rainy_day','#trash','#lorem_ipsum','#justatee','#ha_anh_tuan','#thang4laloinoidoi','#haru_haru','#big_bang','#lofi','#kpop','#son_tung','#bigcityboi','#binz','#touliver','#sadboi','#instrumental','#phuong_ly','#ghibli','#rainy_day','#trash','#lorem_ipsum','#justatee','#ha_anh_tuan',
+]
 
 export const trending = [
     {

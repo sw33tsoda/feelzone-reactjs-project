@@ -11,27 +11,27 @@ $pink : #E91E63;
 
 .zone {
     div.trending {
-        margin-top: 1em;
+        margin-top: 0.0em;
         width: 100%;
-
+        position: relative;
         div.pagination {
-            display: flex;
-            justify-content: space-evenly;
+            position: absolute;
+            bottom: 20px;
             a.page {
                 font-weight: bold;
-                text-shadow: 0.1em 0.1em $pink;
-                color:white;
+                color:$pink;
                 width: 50px;
                 border-radius: 0.25em;
                 text-align: center;
                 font-family: $font-roboto;
-                font-size: 1.5em;
+                font-size: 1em;
                 text-decoration:none;
                 cursor: pointer;
             }
 
             a.current-page {
-                color:$pink !important;
+                color:white;
+                background:$pink;
                 text-shadow: none;
             }
         }
@@ -88,6 +88,14 @@ $pink : #E91E63;
                 p.singer {
                     font-family: $font-varta;
                     font-size:0.75em;
+
+                    &:hover {
+                        color:$pink;
+                    }
+                }
+
+                p.views {
+                    font-size:0.65em;
                 }
             }
         }
@@ -138,6 +146,9 @@ $pink : #E91E63;
     
                         p.singer {
                             font-family: $font-varta;
+                            &:hover {
+                                color:$pink;
+                            }
                         }
                     }
 

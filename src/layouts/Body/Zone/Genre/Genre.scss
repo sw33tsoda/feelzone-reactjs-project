@@ -13,9 +13,26 @@ $pink : #E91E63;
     &__genres {
         padding:1em 0 1em 0;
 
+        div.hot-tags {
+            margin-top:0.75em;
+            overflow-wrap: break-word;
+            a.tag {
+                color:$pink;
+                padding:0.20em 0.5em 0.25em 0.5em;
+                font-weight: bold;
+                white-space: nowrap;
+                &:hover {
+                    background:$pink;
+                    color:white;
+                    text-decoration: none;
+                    border-radius: 0.5em;
+                }
+            }
+        }
+
         .genre-item {
-            height: 100px;
-            margin-bottom: 1.5em;
+            height: 75px;
+            margin-bottom: 0.0em;
         }
 
         &__genre {
@@ -42,7 +59,7 @@ $pink : #E91E63;
                 opacity: 1;
                 transition: 0.5s;
                 font-family: $font-pacifico;
-                font-size: 1.5em;
+                font-size: 1em;
             }
         }
 

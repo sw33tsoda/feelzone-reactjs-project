@@ -8,6 +8,7 @@ import Axios from 'axios';
 import Top from './TopItemProp';
 import {isMobile} from 'react-device-detect';
 import classnames from 'classnames';
+import MusicPlayer from '../MusicPlayer';
 
 Trending.propTypes = {
     items : PropTypes.array,
@@ -20,32 +21,27 @@ Trending.defaultProps = {
 
 function Trending() {
     const [items,setItems] = useState([]);
+    const [topItems,setTopItems] = useState([]);
+    const [currentPlaying,setCurrentPlaying] = useState({});
     const [currentPage,setCurrentPage] = useState(0);
     const [totalItems,setTotalItems] = useState(0);
     const itemsPerPage = 27;
     const totalPages = Math.ceil(totalItems/itemsPerPage);
     
     const Pagination = () => {
-        let result = [];
+        const result = {pages:[]};
         for (let i = 0; i < totalPages; i++) {
-            result.push(<a className={classnames('page',{'current-page':i === currentPage})} onClick={() => setCurrentPage(i)}>{i+1}</a>);
+            result.pages.push(<a className={classnames('page',{'current-page':i === currentPage})} onClick={() => setCurrentPage(i)}>{i+1}</a>);
         }
-
-        if (currentPage > 0)
-            result.unshift(<a className="page" onClick={() => setCurrentPage(currentPage-1)}>P</a>);
-        if (totalPages - 1 > currentPage)
-            result.push(<a className="page" onClick={() => setCurrentPage(currentPage+1)}>N</a>);
-
-        return result;
+        return result.pages;
     }
-
-    console.log(currentPage,totalPages);
 
     useEffect(() => {
         const API = () => {
             Axios.get('http://mp3.zing.vn/xhr/chart-realtime').then(response => {
                 if (response.status === 200) {
                     const {data:{data:{song}}} = response;
+                    setTopItems(song.slice(0,6));
                     setTotalItems(song.length);
                     setItems(song.slice(currentPage * itemsPerPage,(currentPage + 1) * itemsPerPage));
                 }
@@ -56,6 +52,15 @@ function Trending() {
         API();
     },[currentPage]);
 
+    const handleSetCurrentPlaying = async (song) => {
+        const {thumbnail,title,performer} = song;
+        setCurrentPlaying({
+            thumbnail:thumbnail,
+            title:title,
+            singer:performer,
+        });
+    }
+
     return (
         <div className="trending">
             <ContentTitle title="TRENDING NOW"></ContentTitle>
@@ -64,7 +69,7 @@ function Trending() {
                     <Col lg="7">
                         <Row>
                             {items.map((item,index) => <Col key={index} sm="6" lg="4">
-                                <TrendingItemProp item={item}></TrendingItemProp>
+                                <TrendingItemProp item={item} setCurrentPlaying={handleSetCurrentPlaying}></TrendingItemProp>
                             </Col>)}
                         </Row>
                         <div className="pagination">
@@ -75,16 +80,20 @@ function Trending() {
                     <Col lg="5">
                         <div className="top" style={
                             !isMobile && {
-                                borderLeft: '1px #E91E63 dashed',
+                                borderLeft: '2px #E91E63 dashed',
                                 paddingLeft: '1em'
                             }
                         }>
-                            {items.slice(0,6).map((item,index) => <Top item={item} index={index} key={index}></Top>)}
+                            {topItems.map((item,index) => <Top item={item} setCurrentPlaying={handleSetCurrentPlaying} index={index} key={index}></Top>)}
                         </div>
                     </Col>
                 </Row>
-                
             </Container>
+            {Object.keys(currentPlaying).length > 0 && <MusicPlayer 
+                thumbnail={currentPlaying.thumbnail}
+                title={currentPlaying.title}
+                singer={currentPlaying.singer}
+            ></MusicPlayer>}
         </div>
     );
 }
