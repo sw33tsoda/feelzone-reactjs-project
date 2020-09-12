@@ -1,15 +1,21 @@
 import React from 'react';
-import { Container, Jumbotron } from 'reactstrap';
 import Headline from './Headline';
 import SignUp from './SignUp';
 import ContentTitle from './ContentTitle';
 import Features from './Features';
 import Statistic from './Statistic';
 
-function Intro(props) {
+function Intro() {
     return (
         <div className="intro">
             <Headline></Headline>
+            <ContentTitle 
+                title="Application features"
+                sub_title="Everything you need to know about our application, what makes it different."
+                textAlign="center"
+            ></ContentTitle>
+
+            <Features></Features>
 
             <ContentTitle 
                 title="Our statistics"
@@ -19,13 +25,6 @@ function Intro(props) {
 
             <Statistic></Statistic>
 
-            <ContentTitle 
-                title="Application features"
-                sub_title="Everything you need to know about our application, what makes it different."
-                textAlign="center"
-            ></ContentTitle>
-
-            <Features></Features>
 
             <div className="sign-up-group">
                 <ContentTitle 

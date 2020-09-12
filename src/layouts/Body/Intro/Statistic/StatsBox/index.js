@@ -1,11 +1,31 @@
 import React from 'react';
 import CountUp from 'react-countup';
+import PropTypes from 'prop-types';
+
+StatsBox.propTypes = {
+    figure: PropTypes.number,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    chart: PropTypes.string,
+    chartName: PropTypes.string,
+    changeChart: PropTypes.func,
+}
+
+StatsBox.defaultProps = {
+    figure: null,
+    title: 'Untitled',
+    description: 'No description',
+    chart: 'line',
+    chartName:'Chart',
+    changeChart: null,
+}
 
 function StatsBox(props) {
     const {figure,title,description,chart,chartName,changeChart} = props;
 
     const handleOnClickChangeChart = () => {
-        changeChart(chart,chartName);
+        if (changeChart)
+            changeChart(chart,chartName);
     }
     return (
         <center>

@@ -1,13 +1,24 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeadphones,faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
+
+TrendingItemProp.propTypes = {
+    item : PropTypes.object,
+    setCurrentPlaying : PropTypes.func,
+}
+
+TrendingItemProp.defaultProps = {
+    item : {},
+    setCurrentPlaying : null,
+}
 
 function TrendingItemProp(props) {
     const {item,setCurrentPlaying} = props;
     return (
         <div className="trending-item" onClick={() => setCurrentPlaying(item)}>
             <div className="picture">
-                <img src={item.thumbnail}></img>
+                <img alt="" src={item.thumbnail}></img>
                 <FontAwesomeIcon icon={faPlay} color="white"></FontAwesomeIcon>
             </div>
             

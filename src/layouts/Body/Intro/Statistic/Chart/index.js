@@ -1,7 +1,6 @@
 import React from 'react';
 import { Line, Doughnut } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
-import { Row, Col } from 'reactstrap';
 
 Chart.propTypes = {
     type:   PropTypes.string,
@@ -12,7 +11,7 @@ Chart.propTypes = {
 
 Chart.defaultProps = {
     type:'',
-    data:null,
+    data:{},
     width:350,
     height:100,
 }
@@ -20,7 +19,7 @@ Chart.defaultProps = {
 function Chart(props) {
     const {type,data,width,height} = props;
     
-    const {actualData,options,description} = data;
+    const {actualData,options} = data;
     
     function SelectedChart() {
         switch (type) {
@@ -34,8 +33,10 @@ function Chart(props) {
                     <Doughnut data={actualData} width={width} height={height} options={options}></Doughnut>
                 );
             }
+
+            default:
+                return null;
         }
-        return null;
     }
 
     return (

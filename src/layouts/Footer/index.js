@@ -23,9 +23,9 @@ function Footer() {
                         <Col>
                             <div className="footer__column">
                                 <h5>Explore</h5>
-                                <a href="#">Home</a>
-                                <a href="#">Intro</a>
-                                <a href="#">Zone</a>
+                                <a href="# ">Home</a>
+                                <a href="# ">Intro</a>
+                                <a href="# ">Zone</a>
                             </div>
                         </Col>
 
@@ -43,18 +43,18 @@ function Footer() {
                         <Col>
                             <div className="footer__column">
                                 <h5>Follow</h5>
-                                <a href="#">Facebook</a>
-                                <a href="#">Twitter</a>
-                                <a href="#">Lotus</a>
+                                <a href="# ">Facebook</a>
+                                <a href="# ">Twitter</a>
+                                <a href="# ">Lotus</a>
                             </div>
                         </Col>
 
                         <Col>
                             <div className="footer__column">
                                 <h5>Legal</h5>
-                                <a href="#">Term</a>
-                                <a href="#">Twitter</a>
-                                <a href="#">Lotus</a>
+                                <a href="# ">Term</a>
+                                <a href="# ">Twitter</a>
+                                <a href="# ">Lotus</a>
                             </div>
                         </Col>
                     </Row>

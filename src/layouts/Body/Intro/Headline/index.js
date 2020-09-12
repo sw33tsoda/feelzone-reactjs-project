@@ -1,9 +1,8 @@
-import React, { useState, useLayoutEffect, useEffect } from 'react';
-import { Col, Row, Button, Container } from 'reactstrap';
+import React, { useState, useLayoutEffect } from 'react';
+import { Col, Row, Container } from 'reactstrap';
 import classnames from 'classnames';
 import PhoneImage from '../Headline/phone.png';
 import "./Headline.scss";
-import WOW from 'wowjs';
 
 function Headline(props) {
     const [size,setSize] = useState([0,0]);
@@ -32,7 +31,7 @@ function Headline(props) {
                     </Col>
                     <Col sm="auto" md="6">
                         <div className={classnames("intro__headline__image", size[0] < 768 ? "intro__headline__image__hand-device" : "")}>
-                            <img src={PhoneImage} width="75%"></img>
+                            <img alt="" src={PhoneImage} width="75%"></img>
                         </div>
                     </Col>
                 </Row>

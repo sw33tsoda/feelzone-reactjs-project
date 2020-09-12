@@ -7,7 +7,7 @@ import Chart from './Chart';
 import {ChartData} from './ChatData';
 import { isMobile } from 'react-device-detect';
 
-function Statistic(props) {
+function Statistic() {
     const WOW_delay = 0 + "s";
     const WOW_duration = 2 + "s";
     

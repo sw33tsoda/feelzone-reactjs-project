@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@600&display=swap');
 
-
-$font-pacifico: 'Pacifico',cursive;
 $font-roboto : 'Roboto Condensed', sans-serif;
-
+$font-openSans : 'Open Sans', sans-serif;
+$font-varta : 'Varta', sans-serif;
+$font-pacifico: 'Pacifico',cursive;
 $pink : #E91E63;
 
 .header {
@@ -33,6 +34,53 @@ $pink : #E91E63;
             }
             &::placeholder {
                 color:$pink;
+            }
+        }
+
+        .results {
+            position: absolute;
+            background:$pink;
+            color:white;
+            border-radius: 0.25em;
+            width: 100%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .result {
+                padding:5px 10px 5px 10px;
+                border-bottom: 1px solid #ff679a59;
+                display:flex;
+                flex-direction: row;
+                .thumbnail {
+
+                }
+
+                .info {
+                    padding-left: 5px;
+                    p {
+                        margin:0;
+                        padding:0;
+                        text-align: left !important;
+                    }
+
+                    p.title {
+                        font-family: $font-roboto;
+                    }
+
+                    p.artist {
+                        font-family: $font-varta;
+                        font-style: italic;
+                    }
+                }
+
+                &:hover {
+                    background:#ff9ebe59;
+
+                    p.title {
+                        font-weight: bold;
+                    }
+                }
             }
         }
     }

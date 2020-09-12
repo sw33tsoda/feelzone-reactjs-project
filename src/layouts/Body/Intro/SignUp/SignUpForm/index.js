@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import {Formik, Form, FastField} from 'formik';
 import InputField from './custom-fields/InputField';
 import './SignUpForm.scss';
-import { Row, Col, Button, Label, Spinner } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import * as Yup from 'yup';
 
 function SignUpForm(props) {
@@ -32,7 +32,7 @@ function SignUpForm(props) {
             <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmitForm} innerRef={formRef}>
                 {
                     (FormikProps) => {
-                        const {values,error,touched,isSubmitting} = FormikProps;
+                        // const {values,error,touched,isSubmitting} = FormikProps;
                         return (
                             <Form>  
                                 <Row>

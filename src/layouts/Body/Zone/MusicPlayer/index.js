@@ -1,9 +1,22 @@
 import React, { useState } from 'react';
 import './MusicPlayer.scss';
-import { Container } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faBackward, faForward, faStop } from '@fortawesome/free-solid-svg-icons';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+
+MusicPlayer.propTypes = {
+    thumbnail: PropTypes.string,
+    title: PropTypes.string,
+    singer: PropTypes.string,
+}
+
+MusicPlayer.defaultProps = {
+    thumbnail: '',
+    title: 'Untitled',
+    singer: 'Various Artists',
+}
+
 
 function MusicPlayer(props) {
     const {thumbnail,title,singer} = props;

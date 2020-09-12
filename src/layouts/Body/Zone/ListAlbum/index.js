@@ -26,7 +26,7 @@ function ListAlbum(props) {
                 <Row>
                     {items && items.map((item,index) => <Col key={index}>
                         <div className="zone__list-album__album">
-                            <img className="zone__list-album__album__picture" src={item.src} width="100%" height="100%"/>
+                            <img alt="" className="zone__list-album__album__picture" src={item.src} width="100%" height="100%"/>
                             <div className={classnames("zone__list-album__album__overlay",{"latest_albums":latestAlbums === 1})}>
                                 <p>{item.title}</p>
                             </div>

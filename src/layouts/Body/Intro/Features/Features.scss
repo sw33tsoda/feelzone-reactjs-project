@@ -11,12 +11,13 @@ $pink : #E91E63;
 .intro {
     &__features {
         &__feature {
+            // border-bottom: 2px dashed $pink;
             height: 300px;
             margin-top:1em;
             margin-bottom: 1em;
             &__title {
-                background:$pink;
-                color:white;
+                color:$pink;
+                font-weight: bolder;
                 padding:0 0.5em 0 0.5em;
                 font-family: $font-roboto;
                 border-radius: 0.15em;
@@ -42,17 +43,17 @@ $pink : #E91E63;
     }
 }
 
-.AI {
-    background:url('./AI.svg') no-repeat right bottom;
-    background-size: 10em;
-}
+// .AI {
+//     background:url('./AI.svg') no-repeat right bottom;
+//     background-size: 10em;
+// }
 
-.F-Point {
-    background:url('./F-Point.svg') no-repeat right bottom;
-    background-size: 10em;
-}  
+// .F-Point {
+//     background:url('./F-Point.svg') no-repeat right bottom;
+//     background-size: 10em;
+// }  
 
-.Editor {
-    background:url('./Editor.svg') no-repeat right bottom;
-    background-size: 10em;
-}
+// .Editor {
+//     background:url('./Editor.svg') no-repeat right bottom;
+//     background-size: 10em;
+// }

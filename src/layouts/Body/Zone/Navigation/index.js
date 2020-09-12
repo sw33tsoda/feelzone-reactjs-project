@@ -2,7 +2,7 @@ import React from 'react';
 import './Navigation.scss';
 import { Container, Row, Col } from 'reactstrap';
 
-function Navigation(props) {
+function Navigation() {
     return (
         <Container>
             <div className="navigation">

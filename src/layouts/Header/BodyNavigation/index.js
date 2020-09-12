@@ -1,12 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
-// import classnames from 'classnames';
 
 
 function BodyNavigation(props) {
-    // const currentPath = window.location.pathname;
     return (
         <div className="header__body-navigation text-right">
             <Link to="/intro">

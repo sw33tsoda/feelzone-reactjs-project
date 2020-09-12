@@ -21,7 +21,7 @@ function Feature(props) {
             <h1 className="intro__features__feature__title">{title}</h1>
             <p className="intro__features__feature__sub-title">{sub_title}</p>
             <p className="intro__features__feature__description">{description}</p>
-            <a className="intro__features__feature__button">Learn more</a>
+            <a href="# " className="intro__features__feature__button">Learn more</a>
         </div>
     );
 }

@@ -1,19 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'reactstrap';
 import Logo from './Logo';
 import './Header.scss';
 import SearchBar from './SearchBar';
 import BodyNavigation from './BodyNavigation';
+import { useLocation } from 'react-router-dom';
 
 Header.propTypes = {};
 Header.defaultProps = {};
 
 function Header(props) {
+    const {pathname} = useLocation();
 
-    const handleSearchInput = () => {
-        //unused
-    }
+    const handleSearchInput = () => {};
+
 
     return (
         <div className="header">
@@ -24,7 +24,7 @@ function Header(props) {
                     </Col>
 
                     <Col>
-                        <SearchBar inputPlaceholder="What's playing in your mind?" searchInput={handleSearchInput}/>
+                        {pathname === '/zone' && <SearchBar inputPlaceholder="What's playing in your mind?" searchInput={handleSearchInput}/>}
                     </Col>
 
                     <Col>

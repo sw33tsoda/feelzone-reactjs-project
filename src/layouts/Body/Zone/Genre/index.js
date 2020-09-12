@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import './Genre.scss';
 import ContentTitle from '../ContentTitle';
 import PropTypes from 'prop-types';
@@ -29,7 +29,7 @@ function Genre(props) {
                     </Col>)}
                 </Row>
                 <div className="hot-tags">
-                    {hotTags.map((tag,index) => <a className="tag" href="# ">{tag}</a>)}
+                    {hotTags.map((tag,index) => <a key={index} className="tag" href="# ">{tag}</a>)}
                 </div>
             </Container>
         </div>

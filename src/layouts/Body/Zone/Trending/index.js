@@ -31,7 +31,15 @@ function Trending() {
     const Pagination = () => {
         const result = {pages:[]};
         for (let i = 0; i < totalPages; i++) {
-            result.pages.push(<a className={classnames('page',{'current-page':i === currentPage})} onClick={() => setCurrentPage(i)}>{i+1}</a>);
+            result.pages.push(
+                <a 
+                    href="# " 
+                    className={classnames('page',{'current-page':i === currentPage})} 
+                    onClick={(event) => {
+                        event.preventDefault();setCurrentPage(i);
+                    }}>{i+1}
+                </a>
+            );
         }
         return result.pages;
     }

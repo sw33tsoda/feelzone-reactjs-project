@@ -7,9 +7,10 @@ $font-openSans : 'Open Sans', sans-serif;
 $font-varta : 'Varta', sans-serif;
 $font-pacifico: 'Pacifico',cursive;
 $pink : #E91E63;
+
 .intro {
     &__headline {
-        background:url('./vector_background_top.svg') no-repeat left top fixed,url('./vector_background_bottom.svg') no-repeat right bottom fixed,linear-gradient(to right, #dd5e89, #E91E63),; 
+        background:url('./vector_background_top.svg') no-repeat left top fixed,url('./vector_background_bottom.svg') no-repeat right bottom fixed,#E91E63,; 
         padding: 5%;
         margin-top: 1em;
         box-shadow: inset 0px 0px 7px 2px rgba(0,0,0,0.2);

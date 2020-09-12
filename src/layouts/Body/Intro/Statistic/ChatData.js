@@ -1,6 +1,3 @@
-import ChartDataLabels from 'chartjs-plugin-datalabels';
-
-
 export const ChartData = {
     registered_users: {
         actualData: {
@@ -23,12 +20,14 @@ export const ChartData = {
             scales: {
                 xAxes: [{
                    gridLines: {
-                      display: false
+                      display: true,
+                      color:'#ff679a59',
                    }
                 }],
                 yAxes: [{
                    gridLines: {
-                      display: false,
+                      display: true,
+                      color:'#ff679a59',
                    },
                 }]
             },
