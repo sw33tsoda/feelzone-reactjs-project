@@ -1,12 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varta:wght@600&display=swap');
+@import '../../App.scss';
 
-$font-roboto : 'Roboto Condensed', sans-serif;
-$font-openSans : 'Open Sans', sans-serif;
-$font-varta : 'Varta', sans-serif;
-$font-pacifico: 'Pacifico',cursive;
-$pink : #E91E63;
 
 .quote {
     text-align:center;
