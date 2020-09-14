@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.scss';
 import Header from './layouts/Header';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Body from './layouts/Body';
 import Footer from './layouts/Footer';
+import './App.css';
 
 function App() {
   // const [scrollHeight,setScrollHeight] = useState(0);
