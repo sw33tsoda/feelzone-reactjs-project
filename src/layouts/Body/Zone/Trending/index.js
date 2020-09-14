@@ -46,7 +46,7 @@ function Trending() {
 
     useEffect(() => {
         const API = () => {
-            Axios.get('http://mp3.zing.vn/xhr/chart-realtime').then(response => {
+            Axios.get('https://mp3.zing.vn/xhr/chart-realtime').then(response => {
                 if (response.status === 200) {
                     const {data:{data:{song}}} = response;
                     setTopItems(song.slice(0,6));
