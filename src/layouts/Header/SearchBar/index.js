@@ -12,7 +12,7 @@ function SearchBar() {
     let debounce = null;
 
     useEffect(() => {
-        const API = async () => {
+        const API = () => {
             Axios.get(`https://ac.mp3.zing.vn/complete?type=artist,song,key,code&num=500&query=${searchInput}`).then(response => {
                 if (response.status === 200) {
                     if (response.data.data.length > 0) {
