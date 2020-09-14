@@ -7,7 +7,7 @@ SearchBar.defaultProps = {};
 
 function SearchBar() {
 
-    const [searchInput,setSearchInput] = useState('something');
+    const [searchInput,setSearchInput] = useState('');
     const [result,setResult] = useState([]);
     let debounce = null;
 
