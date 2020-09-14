@@ -43,10 +43,9 @@
             display: block;
             color:white;
             font-family: $font-varta;
-
             &:hover {
                 text-decoration-line: none;
-                color:black;
+                color:$pink !important;
             }
         }
     }
