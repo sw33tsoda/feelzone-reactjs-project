@@ -16,7 +16,7 @@ function Result(props) {
     return (
         <div className="result">
             <div className="thumbnail">
-                <img src={'https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/' + thumbnail} width="50px"></img>
+                <img alt="empty" src={'https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/' + thumbnail} width="50px"></img>
             </div>
             <div className="info">
                 <p className="title">{title}</p>

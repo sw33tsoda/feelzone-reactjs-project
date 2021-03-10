@@ -1,5 +1,5 @@
 import React from 'react'; 
-import { Row, Col, Container } from 'reactstrap';
+import { Container } from 'reactstrap';
 import './ListAlbum.scss'
 import ContentTitle from '../ContentTitle';
 import PropTypes from 'prop-types';

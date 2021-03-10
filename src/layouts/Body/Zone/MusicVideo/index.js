@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentTitle from '../ContentTitle';
-import { Container, Row, Col } from 'reactstrap';
+import { Container } from 'reactstrap';
 import './MusicVideo.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPlay} from '@fortawesome/free-solid-svg-icons';

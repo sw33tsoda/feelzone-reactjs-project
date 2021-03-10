@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import ContentTitle from '../ContentTitle';
 import Axios from 'axios';
 import Top from './TopItemProp';
-import {isMobile} from 'react-device-detect';
 import classnames from 'classnames';
 import MusicPlayer from '../MusicPlayer';
 

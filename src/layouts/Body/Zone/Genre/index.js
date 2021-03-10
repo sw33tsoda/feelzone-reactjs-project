@@ -2,7 +2,7 @@ import React from 'react';
 import './Genre.scss';
 import ContentTitle from '../ContentTitle';
 import PropTypes from 'prop-types';
-import { Row, Container, Col } from 'reactstrap';
+import { Container } from 'reactstrap';
 import GenreItemProp from './GenreProp';
 import { hotTags } from '../Data';
 
