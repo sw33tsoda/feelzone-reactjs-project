@@ -13,7 +13,7 @@ function Zone(props) {
             <Navigation></Navigation>
             <CarouselSlider></CarouselSlider>
             <ListAlbum data={mostListenedAlbums} title="MOST LISTENED ALBUMS"></ListAlbum>
-            <ListAlbum data={latestAlbums} latestAlbums={1} title="LATEST ALBUMS"></ListAlbum>
+            <ListAlbum data={latestAlbums} latestAlbums={true} title="LATEST ALBUMS"></ListAlbum>
             <Genre data={genre} title="GENRES"></Genre>
             <Trending data={trending}></Trending>
             <MusicVideo></MusicVideo>

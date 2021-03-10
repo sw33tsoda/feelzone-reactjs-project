@@ -23,16 +23,18 @@ function ListAlbum(props) {
         <div className="zone__list-album">
             <ContentTitle title={title}></ContentTitle>
             <Container>
-                <Row>
-                    {items && items.map((item,index) => <Col key={index}>
+                <div className={classnames('wrapper',{
+                    wrapper_latestAlbum:latestAlbums,
+                })}>
+                    {items && items.map((item,index) => 
                         <div className="zone__list-album__album">
                             <img alt="" className="zone__list-album__album__picture" src={item.src} width="100%" height="100%"/>
-                            <div className={classnames("zone__list-album__album__overlay",{"latest_albums":latestAlbums === 1})}>
+                            <div className={classnames("zone__list-album__album__overlay",{"latest_albums":latestAlbums === true})}>
                                 <p>{item.title}</p>
                             </div>
                         </div>
-                    </Col>)}
-                </Row>
+                    )}
+                </div>
             </Container>
         </div>
     )

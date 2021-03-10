@@ -6,6 +6,11 @@
         margin-top: 0.0em;
         width: 100%;
         position: relative;
+
+        .list {
+            margin-bottom: 50px !important;
+        }
+
         div.pagination {
             position: absolute;
             bottom: 20px;
@@ -93,7 +98,17 @@
         }
 
         div.top {
+            border-left:2px #E91E63 dashed;
+            padding-left: 15px;
+            @include mobile {
+                border-left: 0 !important;
+                padding: 0 !important;
+            }
 
+            @include tablet {
+                border-left: 0 !important;
+                padding: 0 !important;
+            }
             div.top-item {
                 margin-bottom: 1em;
                 display: flex;

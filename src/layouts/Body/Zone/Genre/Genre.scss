@@ -6,6 +6,12 @@
     &__genres {
         padding:1em 0 1em 0;
 
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 10px 10px;
+        }
+
         div.hot-tags {
             margin-top:0.75em;
             overflow-wrap: break-word;
@@ -24,17 +30,17 @@
         }
 
         .genre-item {
-            height: 75px;
+            // height: 75px;
             margin-bottom: 0.0em;
         }
 
         &__genre {
             cursor: pointer;
-            width: 100%;
-            height: 100%;
+            height: 75px;
             box-shadow: 3px 3px 1px $pink;
             overflow: hidden; 
             border-radius: 0.25em;
+            position: relative;
             &__picture {
                 object-fit: cover;
                 transition: 0.5s;

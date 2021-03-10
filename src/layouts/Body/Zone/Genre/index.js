@@ -23,11 +23,11 @@ function Genre(props) {
         <div className="zone__genres">
             <ContentTitle title={title}></ContentTitle>
             <Container>
-                <Row>
-                    {items.map((item,index) => <Col className="genre-item" sm="6" md="6" lg="2" key={index}>
+                <div className="wrapper">
+                    {items.map((item,index) =>
                         <GenreItemProp item={item}></GenreItemProp>
-                    </Col>)}
-                </Row>
+                    )}
+                </div>
                 <div className="hot-tags">
                     {hotTags.map((tag,index) => <a key={index} className="tag" href="# ">{tag}</a>)}
                 </div>

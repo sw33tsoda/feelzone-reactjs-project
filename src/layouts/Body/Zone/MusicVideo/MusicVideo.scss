@@ -9,16 +9,24 @@
             font-weight: normal;
         }
 
+        .wrapper {
+            column-count: 4;
+            @include mobile {
+                column-count: 2;
+            }
+        }
+
         div.video {
             margin-bottom: 0.5em;
             box-shadow: 3px 3px 1px rgb(43, 43, 43);
             border-radius: 0.25em;
+            position: relative;
             img.thumbnail {
                 border-radius: 0.25em;
             }
             div.overlay {
                 position: absolute;
-                top: 0%;
+                top: 0;
                 left: 50%;
                 transform: translate(-50%, -70%);
                 opacity: 0;
@@ -33,13 +41,13 @@
                 background:rgba(233, 30, 99, 0.25);
                 width: 100%;
                 height: 100%;
-                opacity: 0;
+                opacity: 1;
                 transition: 0.25s;
             }
             
             &:hover div.overlay {
+                top:55%;
                 opacity: 1;
-                top:50%;
             }
 
             &:hover div.background-overlay {

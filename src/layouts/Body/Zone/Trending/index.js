@@ -75,7 +75,7 @@ function Trending() {
             <Container>
                 <Row>
                     <Col lg="7">
-                        <Row>
+                        <Row className="list">
                             {items.map((item,index) => <Col key={index} sm="6" lg="4">
                                 <TrendingItemProp item={item} setCurrentPlaying={handleSetCurrentPlaying}></TrendingItemProp>
                             </Col>)}
@@ -86,12 +86,7 @@ function Trending() {
                     </Col>
 
                     <Col lg="5">
-                        <div className="top" style={
-                            !isMobile && {
-                                borderLeft: '2px #E91E63 dashed',
-                                paddingLeft: '1em'
-                            }
-                        }>
+                        <div className="top">
                             {topItems.map((item,index) => <Top item={item} setCurrentPlaying={handleSetCurrentPlaying} index={index} key={index}></Top>)}
                         </div>
                     </Col>
