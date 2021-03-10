@@ -5,6 +5,9 @@
     div.music-player {
         position: fixed;
         width: 450px;
+        @include mobile {
+            width: 100%;
+        }
         height: 8vh;
         background:$pink;
         bottom: 10px;

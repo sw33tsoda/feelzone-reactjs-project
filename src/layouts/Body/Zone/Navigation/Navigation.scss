@@ -14,6 +14,7 @@
             @include mobile {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+            
             }
 
             @include tablet {
@@ -32,6 +33,10 @@
                     color:$pink;
                     font-size:1.25em;
                     text-decoration: none;
+
+                    @include mobile {
+                        font-size: 1em;
+                    }
                 }
 
                 &:hover {

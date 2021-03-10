@@ -3,12 +3,29 @@
 
 .header {
     margin-top: 1em;
-
+    height: 75px;
+    display: flex;
+    align-items: center;
     &__logo {
         &__title {
             font-family: $font-pacifico;
             color:$pink;
         }
+    }
+
+    p {
+        margin:0;
+    }
+
+    .search-wrapper {
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+    }
+
+    .search-icon {
+        display: flex;
+        justify-content: center;
     }
 
     &__search-bar {
