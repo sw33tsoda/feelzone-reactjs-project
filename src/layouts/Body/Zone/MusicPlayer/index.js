@@ -30,8 +30,9 @@ function MusicPlayer(props) {
             </div>
 
             <div className="info">
-                <p className="title">{title}</p>
-                <p className="singer">{singer}</p>
+                <div className="group">
+                    <p className="title">{title} - {singer}</p>
+                </div>
                 <div className="duration"></div>
                 <div className="controls">
                     <FontAwesomeIcon icon={faPlay} size="1x" color="white" onClick={() => setIsPlaying(true)}></FontAwesomeIcon>

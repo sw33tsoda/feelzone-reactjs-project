@@ -30,15 +30,19 @@
                 margin:0;
             }
 
-            p.title {
-                color:white;
-                font-family:$font-roboto;
-            }
-
-            p.singer {
-                color:white;
-                font-family: $font-varta;
-                font-size: 0.75em;
+            .group {
+                display: flex;
+                align-items: center;
+                p.title {
+                    color:white;
+                    font-family:$font-roboto;
+                }
+    
+                p.singer {
+                    color:white;
+                    font-family: $font-varta;
+                    font-size: 0.75em;
+                }
             }
 
             div.duration {
