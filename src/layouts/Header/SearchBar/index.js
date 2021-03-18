@@ -14,6 +14,7 @@ function SearchBar() {
     useEffect(() => {
         const API = () => {
             Axios.get(`https://cors-anywhere.herokuapp.com/https://ac.mp3.zing.vn/complete?type=artist,song,key,code&num=500&query=${searchInput}`).then(response => {
+
                 if (response.status === 200) {
                     if (response.data.data.length > 0) {
                         const data = response.data.data[0].song;
